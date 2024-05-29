@@ -1,4 +1,4 @@
-from browser import document, html, timer
+from browser import document, html
 import random
 
 # Initialize the game board
