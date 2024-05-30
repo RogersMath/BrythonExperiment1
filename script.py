@@ -1,5 +1,4 @@
 from browser import document, html, window
-import math
 
 # Initialize the game board
 board_size = 10
@@ -7,15 +6,6 @@ cell_size = 50
 start = (0, 0)
 exit = (9, 9)
 obstacles = set()
-
-# Generate random obstacles using JavaScript's Math.random()
-def random_int(min_val, max_val):
-    return math.floor(window.Math.random() * (max_val - min_val + 1)) + min_val
-
-while len(obstacles) < 3:
-    obstacle = (random_int(0, board_size - 1), random_int(0, board_size - 1))
-    if obstacle != start and obstacle != exit:
-        obstacles.add(obstacle)
 
 # Set up the canvas
 canvas = document["gameCanvas"]
